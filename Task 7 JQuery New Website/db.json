@@ -1,0 +1,42 @@
+{
+  "registered": [
+    {
+      "name": "alizaib",
+      "remail": "alizaib@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "g6a0d3a0h7j9j9h7",
+      "uname": [
+        "ali",
+        "ali@gmail.com"
+      ],
+      "pswd": "123"
+    },
+    {
+      "id": "12312",
+      "name": "aohaib",
+      "email": "ansl@gmail.com",
+      "password": "2312"
+    },
+    {
+      "id": "asd",
+      "name": "asd",
+      "email": "asdkjasd@gmail.com",
+      "password": "asd1q2e"
+    },
+    {
+      "id": "231",
+      "name": "Usman",
+      "email": "Mirza@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "article": [
+    {
+      "remail": "alizaib@gmail.com",
+      "title": "Title of Article",
+      "content": "this is some demo content"
+    }
+  ]
+}

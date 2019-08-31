@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Website</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/jquery.smoothscroll.js"></script>
+  <script src="js/main.js"></script>
+
+
+ </head>
+<body>
+
+<div class="container bg-primary rounded">
+
+<div class="row">
+
+<nav class="navbar navbar-dark  rounded">
+  <!-- Navbar content -->
+
+
+	<button class="navbar-brand col- col-md-3 active  btn btn-primary" id="home" href="index.html">Home</button>
+
+	<button class="navbar-brand col- col-md-2 btn btn-primary" href="bootstrap.html">Link</button>
+	
+	<button class="navbar-brand col- col-md-2 btn btn-primary" id="clickform" >Form</button>
+		
+	<button class="navbar-brand col- col-md-2 btn btn-primary" href="bootstrap.html" id="gotoabout">About</button>
+
+
+</nav>
+</div>
+</div>
+
+
+<br><br>
+
+
+<div class="container-fluid">
+	<div class="row">
+
+		<div class=" col-md-10 offset-md-1">
+		<img class="img-fluid" id="img1" src="img/1.jpg" >
+		<img class="img-fluid" id="img2" src="img/2.jpg" >
+		<img class="img-fluid" id="img3" src="img/3.jpg" >
+		</div>
+
+
+		<div class="offset-md-5 p-2">
+		<button id="showimage1">1</button>
+		<button id="showimage2">2</button>
+		<button id="showimage3">3</button>
+		</div>
+
+	</div>
+
+</div>
+
+<div class="container">
+<hr>
+	<div class="row" id="scrooltoabout">
+		<h2>About The Company</h2>
+
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+	</div>
+<hr>
+
+<h2>Company Environment</h2>
+<hr>
+</div>
+
+
+<div class="container">
+	<div class="row parent-container">
+
+	<div class="col-md-4"><img class="img-fluid"  src="img/1.jpg" ></div>
+	<div class="col-md-4"><img class="img-fluid"  src="img/2.jpg" ></div>
+	<div class="col-md-4"><img class="img-fluid"  src="img/3.jpg" ></div>
+	
+	</div>
+
+<br>
+	<div class="row">
+			
+	<div class="col-md-4"><img class="img-fluid"  src="img/3.jpg" ></div>
+	<div class="col-md-4"><img class="img-fluid"  src="img/2.jpg" ></div>
+	<div class="col-md-4"><img class="img-fluid"  src="img/1.jpg" ></div>
+	
+	</div>
+
+<hr>
+
+
+<div class="container">
+	<div class="row">
+		<h1 class="col-md-12"> Fetch Data From API:</h1>
+		<button class="btn btn-primary col-md-1 container" id="fetchbtn" onclick="getPost();getComments();">Fetch</button>
+	
+	</div>
+<br>
+	<div class="row" id="cardDiv"></div>
+
+
+</div>
+
+
+
+
+<br>
+<hr>
+
+</div>
+	
+	<div id="#loadcontent">
+		
+
+	</div>
+
+
+<div class="container">
+	<div class="row ">
+	
+	<form name="myform" action="http://localhost:3000/users" method="post" class="col-md-12" >
+		<input class="col-md-12 form-control" type="text" name="id" id="id" placeholder="id">
+		<input class="col-md-12 form-control" type="text" name="firstName" id="firstName" placeholder="firstName">
+		<input class="col-md-12 form-control" type="text" name="lastName" id="lastName"  placeholder="lastName">
+		<input class="col-md-12 form-control" type="email" name="email"  id="email" placeholder="email">
+		<input class="col-md-12 form-control" type="text" name="age" id="age"  placeholder="age">
+		<input class="col-md-12 form-control" type="text" name="companyId" id="companyId"  placeholder="companyId">
+		<button onclick="postingdata();" class="btn btn-primary col-md-12" id="postdata">Submit</button>
+</form>
+
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+
+$(document).ready(function(){
+
+
+	$("#clickform").click(function(){
+		alert("AZ");
+        $("#loadcontent").load("form.html");
+
+    });
+
+
+	  $("#img2").hide();
+	  $("#img3").hide();
+
+	$("#showimage1").click(function(){
+	  $("#img1").show(1500);
+	  $("#img2").hide(1000);
+	  $("#img3").hide(1000);
+	});
+
+	$("#showimage2").click(function(){
+	  $("#img2").show(1500);
+	  $("#img1").hide(1000);
+	  $("#img3").hide(1000);
+	});
+
+	$("#showimage3").click(function(){
+	  $("#img3").show(1500);
+	  $("#img1").hide(1000);
+	  $("#img2").hide(1000);
+	});
+
+	$(document).on('click', '#delete', function(){ 
+			deleteonline();
+	});
+
+});
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+ 
+</body>
+</html>
